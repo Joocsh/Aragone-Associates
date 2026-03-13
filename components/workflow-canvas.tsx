@@ -151,7 +151,7 @@ function WorkflowCanvasContent({ workflow, error }: WorkflowCanvasProps) {
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       fitView
-      attributionPosition="bottom-left"
+      proOptions={{ hideAttribution: true }}
       zoomOnScroll={false}
       panOnScroll={true}
     >

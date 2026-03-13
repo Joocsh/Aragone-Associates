@@ -99,58 +99,6 @@ export function WorkflowChecklist({ workflow }: WorkflowChecklistProps) {
               });
             })
           ]),
-
-          // NEW SECTION: Strategic Alignment Analysis
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "HOW THIS WORKFLOW SAVES TIME & KEEPS THE TEAM ALIGNED",
-                bold: true,
-                size: 24,
-                color: "374151",
-              }),
-            ],
-            spacing: { before: 800, after: 300 },
-            border: {
-              bottom: { color: "E5E7EB", space: 5, style: "single", size: 6 },
-            },
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "This workflow organizes listing meeting preparation into a structured 72-hour timeline to ensure every task is completed in advance and nothing is left to the last minute. By breaking the process into clear stages, the Virtual Assistant can prepare documents, coordinate with team members, and gather marketing assets in a logical sequence that reduces errors and avoids unnecessary urgency.",
-                size: 20,
-              }),
-            ],
-            spacing: { before: 200, after: 200 },
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "The workflow also improves team alignment by clearly defining responsibilities and deadlines. For example, the digital editor in Argentina receives asset requests early, ensuring time zone differences do not delay the preparation of presentation materials. At the same time, Paula receives organized updates and meeting briefs rather than multiple scattered requests, allowing her to focus on client relationships and strategic conversations.",
-                size: 20,
-              }),
-            ],
-            spacing: { before: 200, after: 200 },
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "Using tools such as Follow Up Boss and Asana ensures that tasks, documents, and communication remain centralized and transparent. Team members can easily track progress, access files, and understand their responsibilities without constant follow-ups.",
-                size: 20,
-              }),
-            ],
-            spacing: { before: 200, after: 200 },
-          }),
-          new Paragraph({
-            children: [
-              new TextRun({
-                text: "As a result, Paula enters each listing meeting fully prepared with drafted agreements, organized disclosures, updated market data, and a complete presentation. This structured approach reduces last-minute stress, improves collaboration across the team, and helps maintain a consistent and professional experience for every potential listing client.",
-                size: 20,
-              }),
-            ],
-            spacing: { before: 200, after: 400 },
-          }),
           
           // Footer
           new Paragraph({
@@ -199,15 +147,15 @@ export function WorkflowChecklist({ workflow }: WorkflowChecklistProps) {
         {/* Aesthetic Header */}
         <div className="space-y-4 border-b border-gray-100 pb-12">
           <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-gray-300"></span>
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Operational Protocol</p>
+            <span className="h-px w-8 bg-[#c4a76c]"></span>
+            <p className="text-[10px] font-bold text-[#c4a76c] uppercase tracking-[0.3em]">Operational Protocol</p>
           </div>
           <h1 className="text-5xl font-heading font-extrabold text-gray-900 tracking-tight leading-none">
-            Project <span className="text-gray-300">Checklist</span>
+            Project <span className="text-[#c4a76c]/60">Checklist</span>
           </h1>
           <div className="flex items-center gap-6 mt-6">
             <div className="flex items-center gap-2">
-              <div className="w-2.5 h-2.5 rounded-full bg-black animate-pulse"></div>
+              <div className="w-2.5 h-2.5 rounded-full bg-[#c4a76c] animate-pulse"></div>
               <span className="text-[12px] font-bold text-gray-900 uppercase tracking-wider">Aragonian Associates</span>
             </div>
             <div className="h-4 w-px bg-gray-200"></div>
@@ -219,7 +167,7 @@ export function WorkflowChecklist({ workflow }: WorkflowChecklistProps) {
 
         {workflow.phases.map((phase) => (
           <div key={phase.id} className="space-y-8">
-            <h2 className="text-[11px] font-black text-gray-400 uppercase tracking-[0.25em] flex items-center gap-4">
+            <h2 className="text-[11px] font-black text-[#b09b6b] uppercase tracking-[0.25em] flex items-center gap-4">
               {phase.title}
               <span className="flex-1 h-px bg-gray-100"></span>
             </h2>

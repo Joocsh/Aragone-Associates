@@ -101,14 +101,8 @@ export default function Home() {
       {/* Navigation Layer */}
       <header className="sticky top-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-md border-b border-gray-200 px-4 md:px-12 py-4 w-full print-hide">
         <div className="flex items-center justify-between w-full max-w-screen-2xl">
-          
-          {/* Logo (Left) */}
           <div className="flex items-center">
             <img src="/logo.png" alt="Aragone & Associates Logo" className="h-7 md:h-11 object-contain" />
-          </div>
-
-          <div className="flex items-center">
-            {/* Nav actions removed */}
           </div>
         </div>
       </header>
@@ -118,33 +112,42 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto w-full p-6 md:p-12 pb-24 space-y-16">
           
           {/* Assignment Hero Section */}
-          <section className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 pt-2 lg:pt-8 print-hide">
-            <div className="space-y-6 flex-1 lg:max-w-[50%]">
+          <section className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20 pt-2 lg:pt-6 print-hide">
+            <div className="space-y-8 flex-1 lg:max-w-[50%]">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="h-px w-10 bg-[#c4a76c]"></span>
+                <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c4a76c]">Executive Protocol</span>
+              </div>
               <h2 className="text-5xl md:text-6xl xl:text-7xl font-heading text-gray-900 leading-[1.05] tracking-[-0.03em] font-bold text-left">
-                Client Listing <br/><span className="text-gray-400">Preparation Protocol</span>
+                Client Listing <span className="text-[#c4a76c]">Preparation Protocol</span>
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 font-sans font-normal leading-relaxed max-w-xl mt-6 text-left">
+              <p className="text-lg md:text-xl text-gray-600 font-sans font-normal leading-relaxed max-w-xl text-left">
                 A streamlined, automated workflow designed specifically for Paula, our CEO. Built to ensure flawless execution and total team alignment before every critical client listing meeting.
               </p>
+              <div className="flex items-center gap-4 pt-2">
+                <div className="w-2 h-2 rounded-full bg-[#c4a76c]"></div>
+                <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-gray-500">Aragonian Associates</span>
+              </div>
             </div>
 
             {/* CEO Image */}
             <div className="flex-shrink-0 relative w-full lg:w-[45%] mt-4 lg:mt-0">
+              <div className="absolute -inset-3 bg-gradient-to-br from-[#c4a76c]/10 via-transparent to-[#c4a76c]/5 rounded-[2.5rem] z-0"></div>
               <img 
                 src="/paula.jpg" 
                 alt="Paula Aragone, CEO" 
-                className="relative w-full h-[300px] md:h-[400px] lg:h-[480px] xl:h-[520px] object-cover rounded-[1.5rem] md:rounded-[2rem] z-10"
+                className="relative w-full h-[300px] md:h-[400px] lg:h-[480px] xl:h-[520px] object-cover rounded-[1.5rem] md:rounded-[2rem] z-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)]"
                 style={{ objectPosition: 'center 20%' }}
               />
             </div>
           </section>
 
           {/* Interactive Workspace Section */}
-          <section className="space-y-6 mt-12 print-mt-0">
+          <section className="space-y-6 mt-4 print-mt-0">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-200 pb-4 print-hide">
               <div>
                 <h2 className="text-2xl font-heading font-bold text-gray-900 tracking-tight">Interactive Workspace</h2>
-                <p className="text-sm text-gray-500 font-sans font-medium mt-1">
+                <p className="text-sm text-[#b09b6b] font-sans font-medium mt-1">
                   Visualize your SOP, edit in real-time or create custom checklists.
                 </p>
               </div>
@@ -179,11 +182,11 @@ export default function Home() {
                 </button>
                 <button 
                   type="button"
-                  onClick={() => window.dispatchEvent(new Event(view === 'workflow' ? 'download-workflow' : 'download-checklist'))}
-                  className="group flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 bg-white border border-gray-200/80 rounded-[14px] shadow-sm hover:shadow-md hover:bg-gray-50/80 hover:border-gray-300 transition-all active:scale-[0.98]"
+                  onClick={() => window.dispatchEvent(new Event('download-checklist'))}
+                  className="group flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 bg-white border border-gray-200/80 rounded-[14px] shadow-sm hover:shadow-md hover:bg-gray-50/80 hover:border-[#c4a76c]/40 transition-all active:scale-[0.98]"
                 >
                   <svg 
-                    className="w-[18px] h-[18px] text-gray-500 group-hover:text-gray-900 transition-colors" 
+                    className="w-[18px] h-[18px] text-gray-500 group-hover:text-[#c4a76c] transition-colors" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24" 
@@ -197,7 +200,6 @@ export default function Home() {
             </div>
 
             <div id="workflow-container" className="bg-white rounded-[24px] border border-gray-200 shadow-sm overflow-hidden flex flex-col lg:flex-row h-[700px] ring-1 ring-black/[0.03]">
-              {/* Editor Workspace Panel */}
               <div className="w-full lg:w-[32%] flex-shrink-0 border-r-0 lg:border-r border-b lg:border-b-0 border-gray-100 bg-[#fafafa] overflow-hidden flex flex-col print-hide">
                 <div className="flex-1 overflow-y-auto">
                   <WorkflowEditor 
@@ -208,7 +210,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Canvas/Checklist Workspace Panel */}
               <div className="flex-1 overflow-hidden relative bg-[#f8f9fc]">
                 {view === 'workflow' ? (
                   <WorkflowCanvas workflow={workflow} error={error} />
@@ -221,9 +222,13 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Bilingual Explanation Cards - Moved Below */}
+          {/* Bilingual Explanation Cards */}
           <section className="pt-16 mt-8 border-t border-gray-100 print-pt-0 print-border-0" id="print-rationale">
-            <div className="mb-8">
+            <div className="mb-10">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="h-px w-10 bg-[#c4a76c]"></span>
+                <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c4a76c]">Strategic Analysis</span>
+              </div>
               <h2 className="text-3xl font-heading font-bold text-gray-900 tracking-tight">How This Workflow Saves Time & Keeps the Team Aligned</h2>
               <p className="text-sm text-gray-500 font-sans font-medium mt-2">
                 The strategic value behind our automated protocol.
@@ -231,7 +236,7 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)] transition-all">
+              <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-heading font-bold text-lg text-gray-900">Strategic Impact</h3>
                   <span className="px-2 py-1 bg-gray-100 rounded text-[10px] font-bold tracking-widest text-gray-600 uppercase">English</span>
@@ -244,16 +249,16 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.4)] transition-all">
+              <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-0.5 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="font-heading font-bold text-lg text-white">Impacto Estratégico</h2>
-                  <span className="px-2 py-1 bg-gray-800 rounded text-[10px] font-bold tracking-widest text-gray-300 uppercase">Español</span>
+                  <h2 className="font-heading font-bold text-lg text-white">Impacto Estrat\u00e9gico</h2>
+                  <span className="px-2 py-1 bg-gray-800 rounded text-[10px] font-bold tracking-widest text-gray-300 uppercase">Espa\u00f1ol</span>
                 </div>
                 <div className="space-y-4 text-base text-gray-300 font-normal leading-relaxed font-sans">
-                  <p>Este workflow organiza la preparación de una reunión de listado en una línea de tiempo estructurada de 72 horas para asegurar que cada tarea se complete con anticipación y que nada quede para el último momento. Al dividir el proceso en etapas claras, el asistente virtual puede preparar documentos, coordinar con el equipo y recopilar activos de marketing en una secuencia lógica que reduce errores y evita urgencias innecesarias.</p>
-                  <p>El workflow también mejora la alineación del equipo al definir responsabilidades y plazos de forma clara. Por ejemplo, el editor digital en Argentina recibe las solicitudes de activos visuales con suficiente anticipación, lo que evita que las diferencias de horario retrasen la preparación de la presentación. Al mismo tiempo, Paula recibe resúmenes organizados y actualizaciones clave en lugar de múltiples solicitudes dispersas, lo que le permite enfocarse en las relaciones con clientes y en decisiones estratégicas.</p>
+                  <p>Este workflow organiza la preparaci\u00f3n de una reuni\u00f3n de listado en una l\u00ednea de tiempo estructurada de 72 horas para asegurar que cada tarea se complete con anticipaci\u00f3n y que nada quede para el \u00faltimo momento. Al dividir el proceso en etapas claras, el asistente virtual puede preparar documentos, coordinar con el equipo y recopilar activos de marketing en una secuencia l\u00f3gica que reduce errores y evita urgencias innecesarias.</p>
+                  <p>El workflow tambi\u00e9n mejora la alineaci\u00f3n del equipo al definir responsabilidades y plazos de forma clara. Por ejemplo, el editor digital en Argentina recibe las solicitudes de activos visuales con suficiente anticipaci\u00f3n, lo que evita que las diferencias de horario retrasen la preparaci\u00f3n de la presentaci\u00f3n. Al mismo tiempo, Paula recibe res\u00famenes organizados y actualizaciones clave en lugar de m\u00faltiples solicitudes dispersas, lo que le permite enfocarse en las relaciones con clientes y en decisiones estrat\u00e9gicas.</p>
                   <p>El uso de herramientas como Follow Up Boss y Asana permite que las tareas, documentos y comunicaciones se mantengan centralizados y visibles para todo el equipo. Esto facilita el seguimiento del progreso, el acceso a archivos y la claridad sobre las responsabilidades de cada miembro.</p>
-                  <p>Como resultado, Paula llega a cada reunión de listado completamente preparada, con contratos listos para firma, datos de mercado actualizados y una presentación profesional organizada. Este enfoque estructurado reduce el estrés de último momento, mejora la colaboración del equipo y asegura una experiencia profesional y consistente para cada posible cliente.</p>
+                  <p>Como resultado, Paula llega a cada reuni\u00f3n de listado completamente preparada, con contratos listos para firma, datos de mercado actualizados y una presentaci\u00f3n profesional organizada. Este enfoque estructurado reduce el estr\u00e9s de \u00faltimo momento, mejora la colaboraci\u00f3n del equipo y asegura una experiencia profesional y consistente para cada posible cliente.</p>
                 </div>
               </div>
             </div>
