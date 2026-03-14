@@ -98,6 +98,10 @@ export function WorkflowEditor({ defaultValue, onWorkflowChange }: WorkflowEdito
               <code className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-900 border border-gray-200">Step: Label</code>
             </div>
             <div className="flex items-center justify-between text-[12px]">
+              <span className="text-gray-500 font-light">Add Checklist Task</span>
+              <code className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-900 border border-gray-200">Task: Label</code>
+            </div>
+            <div className="flex items-center justify-between text-[12px]">
               <span className="text-gray-500 font-light">Add Decisions</span>
               <code className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-900 border border-gray-200">Decision: Question?</code>
             </div>

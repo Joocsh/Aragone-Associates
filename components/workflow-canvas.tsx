@@ -88,7 +88,7 @@ function WorkflowCanvasContent({ workflow, error }: WorkflowCanvasProps) {
     const transform = [
       -nodesBounds.x + padding,
       -nodesBounds.y + padding,
-      2 // Scale factor for high quality (2x resolution)
+      1 // Normal scale
     ];
 
     const viewportElement = document.querySelector('.react-flow__viewport') as HTMLElement;
@@ -96,8 +96,9 @@ function WorkflowCanvasContent({ workflow, error }: WorkflowCanvasProps) {
 
     toPng(viewportElement, {
       backgroundColor: '#f8f9fc',
-      width: width * 2, // Double for high res
-      height: height * 2,
+      width: width, 
+      height: height,
+      pixelRatio: 4, // Higher quality export
       style: {
         width: `${width}px`,
         height: `${height}px`,

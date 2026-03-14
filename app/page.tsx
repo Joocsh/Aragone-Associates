@@ -182,7 +182,13 @@ export default function Home() {
                 </button>
                 <button 
                   type="button"
-                  onClick={() => window.dispatchEvent(new Event('download-checklist'))}
+                  onClick={() => {
+                    if (view === 'workflow') {
+                      window.dispatchEvent(new Event('download-workflow'));
+                    } else {
+                      window.dispatchEvent(new Event('download-checklist'));
+                    }
+                  }}
                   className="group flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 bg-white border border-gray-200/80 rounded-[14px] shadow-sm hover:shadow-md hover:bg-gray-50/80 hover:border-[#c4a76c]/40 transition-all active:scale-[0.98]"
                 >
                   <svg 
@@ -251,14 +257,14 @@ export default function Home() {
 
               <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-0.5 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="font-heading font-bold text-lg text-white">Impacto Estrat\u00e9gico</h2>
-                  <span className="px-2 py-1 bg-gray-800 rounded text-[10px] font-bold tracking-widest text-gray-300 uppercase">Espa\u00f1ol</span>
+                  <h2 className="font-heading font-bold text-lg text-white">Impacto Estratégico</h2>
+                  <span className="px-2 py-1 bg-gray-800 rounded text-[10px] font-bold tracking-widest text-gray-300 uppercase">Español</span>
                 </div>
                 <div className="space-y-4 text-base text-gray-300 font-normal leading-relaxed font-sans">
-                  <p>Este workflow organiza la preparaci\u00f3n de una reuni\u00f3n de listado en una l\u00ednea de tiempo estructurada de 72 horas para asegurar que cada tarea se complete con anticipaci\u00f3n y que nada quede para el \u00faltimo momento. Al dividir el proceso en etapas claras, el asistente virtual puede preparar documentos, coordinar con el equipo y recopilar activos de marketing en una secuencia l\u00f3gica que reduce errores y evita urgencias innecesarias.</p>
-                  <p>El workflow tambi\u00e9n mejora la alineaci\u00f3n del equipo al definir responsabilidades y plazos de forma clara. Por ejemplo, el editor digital en Argentina recibe las solicitudes de activos visuales con suficiente anticipaci\u00f3n, lo que evita que las diferencias de horario retrasen la preparaci\u00f3n de la presentaci\u00f3n. Al mismo tiempo, Paula recibe res\u00famenes organizados y actualizaciones clave en lugar de m\u00faltiples solicitudes dispersas, lo que le permite enfocarse en las relaciones con clientes y en decisiones estrat\u00e9gicas.</p>
+                  <p>Este workflow organiza la preparación de una reunión de listado en una línea de tiempo estructurada de 72 horas para asegurar que cada tarea se complete con anticipación y que nada quede para el último momento. Al dividir el proceso en etapas claras, el asistente virtual puede preparar documentos, coordinar con el equipo y recopilar activos de marketing en una secuencia lógica que reduce errores y evita urgencias innecesarias.</p>
+                  <p>El workflow también mejora la alineación del equipo al definir responsabilidades y plazos de forma clara. Por ejemplo, el editor digital en Argentina recibe las solicitudes de activos visuales con suficiente anticipación, lo que evita que las diferencias de horario retrasen la preparación de la presentación. Al mismo tiempo, Paula recibe resúmenes organizados y actualizaciones clave en lugar de múltiples solicitudes dispersas, lo que le permite enfocarse en las relaciones con clientes y en decisiones estratégicas.</p>
                   <p>El uso de herramientas como Follow Up Boss y Asana permite que las tareas, documentos y comunicaciones se mantengan centralizados y visibles para todo el equipo. Esto facilita el seguimiento del progreso, el acceso a archivos y la claridad sobre las responsabilidades de cada miembro.</p>
-                  <p>Como resultado, Paula llega a cada reuni\u00f3n de listado completamente preparada, con contratos listos para firma, datos de mercado actualizados y una presentaci\u00f3n profesional organizada. Este enfoque estructurado reduce el estr\u00e9s de \u00faltimo momento, mejora la colaboraci\u00f3n del equipo y asegura una experiencia profesional y consistente para cada posible cliente.</p>
+                  <p>Como resultado, Paula llega a cada reunión de listado completamente preparada, con contratos listos para firma, datos de mercado actualizados y una presentación profesional organizada. Este enfoque estructurado reduce el estrés de último momento, mejora la colaboración del equipo y asegura una experiencia profesional y consistente para cada posible cliente.</p>
                 </div>
               </div>
             </div>
