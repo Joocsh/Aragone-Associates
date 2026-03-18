@@ -30,7 +30,7 @@ export function WorkflowChecklist({ workflow }: WorkflowChecklistProps) {
           new Paragraph({
             children: [
               new TextRun({
-                text: "ARAGONIAN ASSOCIATES",
+                text: "ARAGONE & ASSOCIATES",
                 bold: true,
                 size: 20,
                 color: "9CA3AF",
@@ -118,7 +118,7 @@ export function WorkflowChecklist({ workflow }: WorkflowChecklistProps) {
     });
 
     Packer.toBlob(doc).then(blob => {
-      saveAs(blob, `Aragonian-Report-${new Date().getTime()}.docx`);
+      saveAs(blob, `Aragone-Report-${new Date().getTime()}.docx`);
     });
   }, [workflow, checkedItems]);
 
@@ -156,7 +156,7 @@ export function WorkflowChecklist({ workflow }: WorkflowChecklistProps) {
           <div className="flex items-center gap-6 mt-6">
             <div className="flex items-center gap-2">
               <div className="w-2.5 h-2.5 rounded-full bg-[#c4a76c] animate-pulse"></div>
-              <span className="text-[12px] font-bold text-gray-900 uppercase tracking-wider">Aragonian Associates</span>
+              <span className="text-[12px] font-bold text-gray-900 uppercase tracking-wider">Aragone & Associates</span>
             </div>
             <div className="h-4 w-px bg-gray-200"></div>
             <div className="text-xs text-gray-500 font-medium">

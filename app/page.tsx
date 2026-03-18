@@ -55,8 +55,8 @@ Task: Review and finalize the Listing Agreement and disclosure documents.
 Task: Upload all drafted documents to the client record in Follow Up Boss (CRM).
 Task: Organize the Listing Agreement, disclosure documents, CMA report, presentation materials, and marketing assets in the shared meeting folder.
 Task: Send drafted documents to Paula for internal review and approval.
-Task: Prepare or update the listing presentation deck with property overview, CMA data, neighborhood insights, marketing strategy, and Aragonian Associates team introduction.
-Task: Ensure the listing presentation follows Aragonian Associates branding and formatting standards.
+Task: Prepare or update the listing presentation deck with property overview, CMA data, neighborhood insights, marketing strategy, and Aragone & Associates team introduction.
+Task: Ensure the listing presentation follows Aragone & Associates branding and formatting standards.
 Task: Follow up with the digital editor to confirm visual assets have been delivered.
 Task: Upload visual assets to the shared folder and verify files are clearly labeled and organized.
 Task: Update the task tracker in Asana or the shared tracker with the progress of meeting preparation.
@@ -126,7 +126,7 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-4 pt-2">
                 <div className="w-2 h-2 rounded-full bg-[#c4a76c]"></div>
-                <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-gray-500">Aragonian Associates</span>
+                <span className="text-[11px] font-semibold tracking-[0.15em] uppercase text-gray-500">Aragone & Associates</span>
               </div>
             </div>
 
@@ -255,7 +255,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-0.5 transition-all duration-300">
+            <div className="bg-[#111827] p-8 rounded-3xl border border-gray-800 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.4)] hover:-translate-y-0.5 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-heading font-bold text-lg text-white">Impacto Estratégico</h2>
                   <span className="px-2 py-1 bg-gray-800 rounded text-[10px] font-bold tracking-widest text-gray-300 uppercase">Español</span>
